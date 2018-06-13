@@ -1,5 +1,6 @@
 # VelixID.js
 
+[Live Example](https://velix-id.github.io/velixid.js/example/) |
 [Site](https://lodash.com/) |
 [App on Google Play Store](https://play.google.com/store/apps/details?id=velix.id.mobile) |
 [App on Apple Appstore](#) ** Coming Soon  ** |

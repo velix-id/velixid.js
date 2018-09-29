@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "JS Library for Velix.ID",
   "main": "velixid.js",
+  "module": "velixid.js",
+  "files": [
+    "velixid.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

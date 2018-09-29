@@ -112,4 +112,4 @@ var VelixID = {
     }
 }
 
-export default VelixID;
+export { VelixID };

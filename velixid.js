@@ -1,3 +1,10 @@
+VELIXID_EVENTS = {
+    LOGIN: 'login',
+    ERROR: 'error',
+    REJECT: 'reject',
+    CANCEL: 'cancel'
+}
+
 function openPopupCenter(url, title, w, h) {
     // Fixes dual-screen position
     // Most browsers use window.screenLeft
@@ -112,4 +119,4 @@ var VelixID = {
     }
 }
 
-export { VelixID };
+export { VelixID, VELIXID_EVENTS };

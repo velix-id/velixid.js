@@ -34,7 +34,7 @@ function openPopupCenter(url, title, w, h) {
 
 
 var VelixID = {
-    EVENTS = {
+    EVENTS: {
         LOGIN: 'login',
         ERROR: 'error',
         REJECT: 'reject',

@@ -1,4 +1,4 @@
-VELIXID_EVENTS = {
+const VELIXID_EVENTS = {
     LOGIN: 'login',
     ERROR: 'error',
     REJECT: 'reject',

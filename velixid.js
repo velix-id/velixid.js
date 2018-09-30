@@ -60,10 +60,12 @@ var VelixID = {
     init: function (params) {
         this._token = params.token;
 
-        document.querySelectorAll('[data-button-type=velixid-login]').forEach(function (button) {
-            this._styleButton(button);
-            this._addBehaviour(button);
-        }.bind(this));
+        if (!prams.disableButtonSetup) {
+            document.querySelectorAll('[data-button-type=velixid-login]').forEach(function (button) {
+                this._styleButton(button);
+                this._addBehaviour(button);
+            }.bind(this));
+        }
 
         window.addEventListener('message', function (e) {
             if (this._popup && e.data.close) {

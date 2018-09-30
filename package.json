@@ -1,6 +1,6 @@
 {
   "name": "velixid.js",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "JS Library for Velix.ID",
   "main": "velixid.js",
   "module": "velixid.js",
@@ -8,7 +8,7 @@
     "velixid.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup src/velixid.js -o ./velixid.js --format umd --name \"velixid.js\""
   },
   "author": "Balwant Singh",
   "license": "ISC"

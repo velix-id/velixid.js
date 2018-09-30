@@ -1,10 +1,3 @@
-const VELIXID_EVENTS = {
-    LOGIN: 'login',
-    ERROR: 'error',
-    REJECT: 'reject',
-    CANCEL: 'cancel'
-}
-
 function openPopupCenter(url, title, w, h) {
     // Fixes dual-screen position
     // Most browsers use window.screenLeft
@@ -41,6 +34,13 @@ function openPopupCenter(url, title, w, h) {
 
 
 var VelixID = {
+    EVENTS = {
+        LOGIN: 'login',
+        ERROR: 'error',
+        REJECT: 'reject',
+        CANCEL: 'cancel'
+    },
+
     init: function (params) {
         this._token = params.token;
 
@@ -119,4 +119,28 @@ var VelixID = {
     }
 }
 
-export { VelixID, VELIXID_EVENTS };
+// Some AMD build optimizers, like r.js, check for condition patterns like:
+if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+    // Expose VelixID on the global object to prevent errors when VelixID is
+    // loaded by a script tag in the presence of an AMD loader.
+    // See http://requirejs.org/docs/errors.html#mismatch for more details.
+    // Use `_.noConflict` to remove VelixID from the global object.
+    root._ = VelixID;
+
+    // Define as an anonymous module so, through path mapping, it can be
+    // referenced as the "underscore" module.
+    define(function () {
+        return VelixID;
+    });
+}
+// Check for `exports` after `define` in case a build optimizer adds it.
+else if (freeModule) {
+    // Export for Node.js.
+    (freeModule.exports = VelixID)._ = VelixID;
+    // Export for CommonJS support.
+    freeExports._ = VelixID;
+}
+else {
+    // Export to the global object.
+    root._ = VelixID;
+}

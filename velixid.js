@@ -60,7 +60,7 @@ var VelixID = {
     init: function (params) {
         this._token = params.token;
 
-        if (!prams.disableButtonSetup) {
+        if (!params.disableButtonSetup) {
             document.querySelectorAll('[data-button-type=velixid-login]').forEach(function (button) {
                 this._styleButton(button);
                 this._addBehaviour(button);
